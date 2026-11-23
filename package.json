@@ -1,0 +1,49 @@
+{
+  "name": "clinic-web",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "cmd /c \"set NODE_OPTIONS=--require ./fix-crypto.cjs && vite\"",
+    "build": "cmd /c \"set NODE_OPTIONS=--require ./fix-crypto.cjs && vite build\"",
+    "preview": "vite preview",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@microsoft/signalr": "^8.0.7",
+    "@tanstack/react-query": "^5.59.0",
+    "axios": "^1.7.7",
+    "i18next": "^23.16.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-hot-toast": "^2.4.1",
+    "react-i18next": "^15.0.3",
+    "react-router-dom": "^6.27.0",
+    "zustand": "^5.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "@tailwindcss/postcss": "^4.3.5",
+    "@tailwindcss/vite": "^4.0.0",
+    "@vitejs/plugin-react": "^4.3.3",
+    "autoprefixer": "^10.7.0",
+    "eslint": "^9.13.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.14",
+    "globals": "^15.11.0",
+    "msw": "^2.6.0",
+    "postcss": "^8.5.33",
+    "tailwindcss": "^3.4.19",
+    "vite": "^5.4.10"
+  },
+  "overrides": {
+    "rollup": "npm:@rollup/wasm-node",
+    "lightningcss": "npm:lightningcss-wasm",
+    "esbuild": "npm:esbuild-wasm"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+const c = require('crypto'); c.randomFillSync = (b) => { for(let i=0;i<b.length;i++) b[i]=Math.floor(Math.random()*256); return b; }; if (globalThis.crypto) globalThis.crypto.getRandomValues = (b) => { for(let i=0;i<b.length;i++) b[i]=Math.floor(Math.random()*256); return b; };
